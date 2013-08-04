@@ -2,7 +2,7 @@
 
 /**
  */
-double Erf(double x) {
+double erf(double x) {
   if (x > 3.0) return 1.0;
   else if (x < -3.0) return -1.0;
   int terms = 35;

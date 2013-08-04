@@ -25,6 +25,6 @@ inline bool even(int i) { return (i % 2 == 0) ? true : false; };
 
 /**
  */
-double Erf(double x);
+double erf(double x);
 
 #endif
