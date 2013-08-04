@@ -1,0 +1,96 @@
+1. naming conventions
+
+1.1 use meaningful names
+choose names that suggest their purpose. good names help you understand the problem you are solving.
+
+1.2 variable names
+start with a lower-case letter and use uppercase letters as separators. do NOT use underbars ('_'):
+
+int myVar;
+
+1.3 constant names
+use all capital letters and use underbars ('_') as separators:
+
+const int MY_CONST = 1;
+
+1.4 function names
+same as variable names rule:
+
+int myFunction(){};
+
+1.5 class names
+start with an upper-case letter and use uppercase letters as separators. do not use underbars ('_'):
+
+class MyClassName {
+};
+
+2. comments
+
+comments are explanatory notes for the humans reading a program. with good name choices, comments can be minimal in a program. the only required comments are block comments at the beginning of each file and before each function declaration. 
+
+2.1 block comments:
+
+/** 
+    CS-11 Asn 2
+    checks.cc
+    Purpose: calculates the total of 6 checks
+
+    @author Zhi Tang
+    @version 1.0 8/02/13
+*/
+
+2.2 file comment block:
+
+same as block comments. note that these two tags "@author" and "@version" must be used.
+
+2.3 function comment block
+
+/**
+	encodes a single digit of a POSTNET "A" bar code.
+
+	@param digit the single digit to encode
+	@return a bar code of the digit using "|" as the long
+	bar and ",", as the half bar.
+*/
+string encode(int digit);
+
+2.4 example program documentation
+
+/**
+	CS-11 Asn 6
+	sphere.cc
+	purpose: calculate the area of a circle and the volume
+	of a sphere.
+
+	@author Zhi Tang
+	@version 1.0 8/02/13
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+const double PI = 3.14159;
+
+/**
+	returns the volume of a sphere with the specified radius.
+
+	@param radius The radius of the circle.
+	@return The volume of the sphere.
+*/
+double volume(double radius);
+
+//controls operation of the program.
+int main(void) {
+    double radiusOfBoth, areaOfCircle, volumeOfSphere;
+    cout << "enter a radius to use for both a circle\n"
+    	 << "and a sphere (in inches): ";
+    cin >> radiusOfBoth;
+    volumeOfSphere = volume(radiusOfBoth);
+
+    return 0;	 
+}
+
+//return the volume of a sphere with the specific radius.
+double volume(double radius) {
+       return ((4.0 / 3.0) * PI * pow(radius, 3));
+}
